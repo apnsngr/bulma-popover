@@ -1,0 +1,51 @@
+@import "node_modules/bulma/sass/utilities/_all.sass";
+
+@import "scss/variables";
+@import "scss/position";
+
+.popover {
+    position: relative;
+    display: inline-block;
+
+    .popover-content {
+        z-index: 99999;
+        position: absolute;
+        display: inline-block;
+        opacity: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        font-size: $size-7;
+        padding: .4rem .8rem;
+        color: $white;
+        background-color: rgba($popover-background-color, $popover-background-opacity);
+        border-radius: $radius;
+
+        &::after {
+            z-index: 99999;
+            position: absolute;
+            display: inline-block;
+            content: '';
+            border-style: solid;
+            border-width: 0.5rem;
+        }
+    }
+
+    @include top;
+
+    &.is-popover-right {
+        @include right;
+    }
+
+    &.is-popover-bottom {
+        @include bottom;
+    }
+
+    &.is-popover-left {
+        @include left;
+    }
+}
+
+.popover:hover .popover-content {
+    opacity: 1;
+    visibility: visible;
+}
