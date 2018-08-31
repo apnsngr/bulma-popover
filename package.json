@@ -1,6 +1,6 @@
 {
   "name": "bulma-popover",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Display popover attached to any element.",
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",

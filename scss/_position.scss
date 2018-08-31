@@ -4,15 +4,14 @@
         bottom: 100% !important;
         left: 50% !important;
         right: auto !important;
-        transform: translate(-50%, -0.5rem) !important;
+        transform: translate(-50%, -0.7rem) !important;
 
-        &::after {
+        &::before {
             top: 100% !important;
             bottom: auto !important;
             left: 50% !important;
             right: auto !important;
-            border-color: rgba($popover-background-color, $popover-background-opacity) transparent transparent transparent;
-            transform: translate(-0.5rem, 0) !important;
+            transform: rotate(-45deg);
         }
     }
 }
@@ -23,15 +22,14 @@
         bottom: 50% !important;
         left: 100% !important;
         right: auto !important;
-        transform: translate(0.5rem, 50%) !important;
+        transform: translate(0.7rem, 50%) !important;
 
-        &::after {
+        &::before {
             top: 50% !important;
             bottom: auto !important;
             left: 0 !important;
             right: auto !important;
-            border-color: transparent rgba($popover-background-color, $popover-background-opacity) transparent transparent;
-            transform: translate(-1rem, -0.5rem) !important;
+            transform: rotate(45deg);
         }
     }
 }
@@ -42,15 +40,14 @@
         bottom: auto !important;
         left: 50% !important;
         right: auto !important;
-        transform: translate(-50%, 0.5rem) !important;
+        transform: translate(-50%, 0.7rem) !important;
 
-        &::after {
-            top: auto !important;
-            bottom: 100% !important;
+        &::before {
+            top: 0 !important;
+            bottom: auto !important;
             left: 50% !important;
             right: auto !important;
-            border-color: transparent transparent rgba($popover-background-color, $popover-background-opacity) transparent;
-            transform: translate(-0.5rem, 0) !important;
+            transform: rotate(135deg);
         }
     }
 }
@@ -61,15 +58,14 @@
         bottom: 50% !important;
         left: auto !important;
         right: 100% !important;
-        transform: translate(-0.5rem, 50%) !important;
+        transform: translate(-0.7rem, 50%) !important;
 
-        &::after {
+        &::before {
             top: 50% !important;
             bottom: auto !important;
             left: 100% !important;
             right: auto !important;
-            border-color: transparent transparent transparent rgba($popover-background-color, $popover-background-opacity);
-            transform: translate(0, -0.5rem) !important;
+            transform: rotate(-135deg);
         }
     }
 }

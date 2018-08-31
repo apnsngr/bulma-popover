@@ -13,22 +13,35 @@
         display: inline-block;
         opacity: 0;
         visibility: hidden;
-        white-space: nowrap;
         font-size: $size-7;
         padding: .4rem .8rem;
-        color: $white;
-        background-color: rgba($popover-background-color, $popover-background-opacity);
+        color: $popover-color;
+        background-color: $popover-background-color;
         border-radius: $radius;
+        box-shadow: $popover-shadow;
+        width: max-content;
+        max-width: $popover-max-width;
 
-        &::after {
-            z-index: 99999;
+        &::before {
             position: absolute;
-            display: inline-block;
             content: '';
             border-style: solid;
-            border-width: 0.5rem;
+            pointer-events: none;
+            height: 0;
+            width: 0;
+            top: 100%;
+            left: 50%;
+            border-color: transparent;
+            border-bottom-color: $popover-background-color;
+            border-left-color: $popover-background-color;
+            border-width: 0.4rem;
+            margin-left: -0.4rem;
+            margin-top: -0.4rem;
+            transform-origin: center;
+            box-shadow: $popover-caret-shadow;
         }
     }
+
 
     @include top;
 
@@ -43,9 +56,17 @@
     &.is-popover-left {
         @include left;
     }
-}
 
-.popover:hover .popover-content {
-    opacity: 1;
-    visibility: visible;
+    &.is-popover-active,
+    &:hover {
+        .popover-content {
+        opacity: 1;
+        visibility: visible;
+        }
+    }
+
+    .popover-trigger:focus ~ .popover-content {
+        opacity: 1;
+        visibility: visible;
+    }
 }
