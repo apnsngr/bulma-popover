@@ -32,7 +32,7 @@ Top is the default.
 Active
 ------
 
-To hold the tooltip open use the `.is-popover-active` modifiers.
+To hold the tooltip open use the `.is-popover-active` modifier.
 
 
 Example
