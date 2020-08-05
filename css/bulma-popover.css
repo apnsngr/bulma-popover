@@ -1,22 +1,18 @@
 @-webkit-keyframes spinAround {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
 @keyframes spinAround {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
@@ -58,8 +54,7 @@
   border-width: 0.4rem;
   margin-left: -0.4rem;
   margin-top: -0.4rem;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
   box-shadow: -1px 1px 2px rgba(10, 10, 10, 0.2);
 }
 
@@ -68,8 +63,7 @@
   bottom: 100% !important;
   left: 50% !important;
   right: auto !important;
-  -webkit-transform: translate(-50%, -0.7rem) !important;
-          transform: translate(-50%, -0.7rem) !important;
+  transform: translate(-50%, -0.7rem) !important;
 }
 
 .popover .popover-content::before {
@@ -77,8 +71,7 @@
   bottom: auto !important;
   left: 50% !important;
   right: auto !important;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .popover.is-popover-right .popover-content {
@@ -86,8 +79,7 @@
   bottom: 50% !important;
   left: 100% !important;
   right: auto !important;
-  -webkit-transform: translate(0.7rem, 50%) !important;
-          transform: translate(0.7rem, 50%) !important;
+  transform: translate(0.7rem, 50%) !important;
 }
 
 .popover.is-popover-right .popover-content::before {
@@ -95,8 +87,7 @@
   bottom: auto !important;
   left: 0 !important;
   right: auto !important;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .popover.is-popover-bottom .popover-content {
@@ -104,8 +95,7 @@
   bottom: auto !important;
   left: 50% !important;
   right: auto !important;
-  -webkit-transform: translate(-50%, 0.7rem) !important;
-          transform: translate(-50%, 0.7rem) !important;
+  transform: translate(-50%, 0.7rem) !important;
 }
 
 .popover.is-popover-bottom .popover-content::before {
@@ -113,8 +103,7 @@
   bottom: auto !important;
   left: 50% !important;
   right: auto !important;
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .popover.is-popover-left .popover-content {
@@ -122,8 +111,7 @@
   bottom: 50% !important;
   left: auto !important;
   right: 100% !important;
-  -webkit-transform: translate(-0.7rem, 50%) !important;
-          transform: translate(-0.7rem, 50%) !important;
+  transform: translate(-0.7rem, 50%) !important;
 }
 
 .popover.is-popover-left .popover-content::before {
@@ -131,8 +119,7 @@
   bottom: auto !important;
   left: 100% !important;
   right: auto !important;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 .popover.is-popover-active .popover-content, .popover:hover .popover-content {
