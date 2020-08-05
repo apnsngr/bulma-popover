@@ -38,8 +38,8 @@
   },
   "files": [
     "css",
-    "sass",
-    "bulma-popover.sass",
+    "scss",
+    "bulma-popover.scss",
     "LICENSE",
     "README.md"
   ]
