@@ -2,6 +2,9 @@
   "name": "bulma-popover",
   "version": "1.0.1",
   "description": "Display popover attached to any element.",
+  "main": "css/bulma-popover.min.css",
+  "style": "css/bulma-popover.min.css",
+  "sass": "bulma-popover.scss",
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
     "build-clean": "rimraf css",
