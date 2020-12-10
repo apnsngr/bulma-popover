@@ -1,3 +1,4 @@
+/* Bulma Utilities */
 @-webkit-keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -6,7 +7,6 @@
     transform: rotate(359deg);
   }
 }
-
 @keyframes spinAround {
   from {
     transform: rotate(0deg);
