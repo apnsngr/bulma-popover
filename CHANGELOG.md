@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2020-12-09
+
+### Fixed
+
+- Fix typo in minified CSS filename
+- Updated package.json to allow this package to be imported easier
+
 ## [1.0.1] - 2020-08-05
 
 ### Fixed
