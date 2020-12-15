@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2020-12-14
+
+### Fixed
+
+- Include copy of minifed CSS with typo name to prevent breakage
+- Make `$popover-radius` work correctly
+
 ## [1.0.2] - 2020-12-09
 
 ### Fixed
@@ -31,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial Bulma popover extension
 
-[Unreleased]: https://github.com/apnsngr/bulma-popover/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/apnsngr/bulma-popover/compare/1.0.3...HEAD
+[1.0.3]: https://github.com/apnsngr/bulma-popover/compare/1.0.2...1.0.3
+[1.0.2]: https://github.com/apnsngr/bulma-popover/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/apnsngr/bulma-popover/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/apnsngr/bulma-popover/releases/tag/1.0.0
