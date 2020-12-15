@@ -65,4 +65,4 @@ Name | Default Value
 `$popover-max-width` | `24rem`
 `$popover-color` | `$text`
 `$popover-background-color` | `$white`
-`$popover-radius` | `$radius-large`
+`$popover-radius` | `$radius` (4px)
