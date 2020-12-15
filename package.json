@@ -6,11 +6,12 @@
   "style": "css/bulma-popover.min.css",
   "sass": "bulma-popover.scss",
   "scripts": {
-    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss && npm run build-typo-patch",
     "build-clean": "rimraf css",
     "build-sass": "node-sass --output-style expanded --source-map true bulma-popover.scss css/bulma-popover.css",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma-popover.css css/bulma-popover.css",
     "build-cleancss": "cleancss -o css/bulma-popover.min.css css/bulma-popover.css",
+    "build-typo-patch": "cp css/bulma-popover.min.css css/bulma-popver.min.css",
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
