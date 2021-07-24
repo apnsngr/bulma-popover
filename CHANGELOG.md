@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0-beta.0] - 2021-07-24
+
+### Added
+
+- Added responsive positioning of popovers
+- Added `is-popover-top` class for completeness
+
+### Security
+
+- Updated development dependencies
+
 ## [1.0.3] - 2020-12-14
 
 ### Fixed
@@ -38,7 +49,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial Bulma popover extension
 
-[Unreleased]: https://github.com/apnsngr/bulma-popover/compare/1.0.3...HEAD
+[Unreleased]: https://github.com/apnsngr/bulma-popover/compare/1.1.0-beta.0...HEAD
+[1.1.0-beta.0]: https://github.com/apnsngr/bulma-popover/compare/1.0.3...1.1.0-beta.0
 [1.0.3]: https://github.com/apnsngr/bulma-popover/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/apnsngr/bulma-popover/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/apnsngr/bulma-popover/compare/1.0.0...1.0.1

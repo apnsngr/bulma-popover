@@ -1,21 +1,4 @@
 /* Bulma Utilities */
-@-webkit-keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-@keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 .popover {
   position: relative;
   display: inline-block;
@@ -58,6 +41,16 @@
   box-shadow: -1px 1px 2px rgba(10, 10, 10, 0.2);
 }
 
+.popover.is-popover-active .popover-content, .popover:hover .popover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popover .popover-trigger:focus ~ .popover-content {
+  opacity: 1;
+  visibility: visible;
+}
+
 .popover .popover-content {
   top: auto !important;
   bottom: 100% !important;
@@ -67,6 +60,22 @@
 }
 
 .popover .popover-content::before {
+  top: 100% !important;
+  bottom: auto !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: rotate(-45deg);
+}
+
+.popover.is-popover-top .popover-content {
+  top: auto !important;
+  bottom: 100% !important;
+  left: 50% !important;
+  right: auto !important;
+  transform: translate(-50%, -0.7rem) !important;
+}
+
+.popover.is-popover-top .popover-content::before {
   top: 100% !important;
   bottom: auto !important;
   left: 50% !important;
@@ -122,13 +131,652 @@
   transform: rotate(-135deg);
 }
 
-.popover.is-popover-active .popover-content, .popover:hover .popover-content {
-  opacity: 1;
-  visibility: visible;
+@media screen and (max-width: 768px) {
+  .popover.is-popover-top-mobile .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-mobile .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-mobile .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-mobile .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-mobile .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-mobile .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-mobile .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-mobile .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
 }
 
-.popover .popover-trigger:focus ~ .popover-content {
-  opacity: 1;
-  visibility: visible;
+@media screen and (min-width: 769px), print {
+  .popover.is-popover-top-tablet .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-tablet .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-tablet .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-tablet .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-tablet .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-tablet .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-tablet .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-tablet .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .popover.is-popover-top-tablet-only .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-tablet-only .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-tablet-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-tablet-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-tablet-only .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-tablet-only .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-tablet-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-tablet-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .popover.is-popover-top-touch .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-touch .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-touch .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-touch .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-touch .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-touch .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-touch .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-touch .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popover.is-popover-top-desktop .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-desktop .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-desktop .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-desktop .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-desktop .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-desktop .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-desktop .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-desktop .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+  .popover.is-popover-top-desktop-only .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-desktop-only .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-desktop-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-desktop-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-desktop-only .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-desktop-only .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-desktop-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-desktop-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .popover.is-popover-top-until-widescreen .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-until-widescreen .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-until-widescreen .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-until-widescreen .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-until-widescreen .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-until-widescreen .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-until-widescreen .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-until-widescreen .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .popover.is-popover-top-widescreen .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-widescreen .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-widescreen .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-widescreen .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-widescreen .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-widescreen .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-widescreen .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-widescreen .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1407px) {
+  .popover.is-popover-top-widescreen-only .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-widescreen-only .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-widescreen-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-widescreen-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-widescreen-only .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-widescreen-only .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-widescreen-only .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-widescreen-only .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (max-width: 1407px) {
+  .popover.is-popover-top-until-fullhd .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-until-fullhd .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-until-fullhd .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-until-fullhd .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-until-fullhd .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-until-fullhd .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-until-fullhd .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-until-fullhd .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .popover.is-popover-top-fullhd .popover-content {
+    top: auto !important;
+    bottom: 100% !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, -0.7rem) !important;
+  }
+  .popover.is-popover-top-fullhd .popover-content::before {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(-45deg);
+  }
+  .popover.is-popover-right-fullhd .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: translate(0.7rem, 50%) !important;
+  }
+  .popover.is-popover-right-fullhd .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: auto !important;
+    transform: rotate(45deg);
+  }
+  .popover.is-popover-bottom-fullhd .popover-content {
+    top: 100% !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translate(-50%, 0.7rem) !important;
+  }
+  .popover.is-popover-bottom-fullhd .popover-content::before {
+    top: 0 !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: rotate(135deg);
+  }
+  .popover.is-popover-left-fullhd .popover-content {
+    top: auto !important;
+    bottom: 50% !important;
+    left: auto !important;
+    right: 100% !important;
+    transform: translate(-0.7rem, 50%) !important;
+  }
+  .popover.is-popover-left-fullhd .popover-content::before {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 100% !important;
+    right: auto !important;
+    transform: rotate(-135deg);
+  }
 }
 /*# sourceMappingURL=bulma-popover.css.map */

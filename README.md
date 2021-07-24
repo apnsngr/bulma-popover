@@ -7,7 +7,6 @@ Bulma's builtin box element.
 
 [bulma-tooltip]: https://github.com/Wikiki/bulma-tooltip
 
-
 Classes
 -------
 
@@ -15,25 +14,32 @@ Classes
 - `popover-trigger` display popover when this element is focused
 - `popover-content` the content of the popover
 
-
-Positions
+Modifiers
 ---------
 
-Modifiers for selecting position:
-
-- `.is-popover-top`
-- `.is-popover-right`
-- `.is-popover-bottom`
-- `.is-popover-left`
-
-Top is the default.
-
-
-Active
-------
-
 To hold the popover open use the `.is-popover-active` modifier.
+This can be used to trigger the popover from JavaScript.
 
+Positioning
+-----------
+
+The popover is positioned above the popover wrapper by default (top).
+
+The following modifiers can be used to set the popover position:
+
+- `is-popover-top`
+- `is-popover-right`
+- `is-popover-bottom`
+- `is-popover-left`
+
+The position can also be set responsively using the following class:
+
+`is-popover-${position}-${breakpoint}`
+
+Where `${position}` is top, right, bottom, or left and `${breakpoint}` is one of [Bulma's breakpoints][bulma-breakpoint].
+For example, `is-popover-bottom-desktop` will position the popover below the popover wrapper for desktop (1024 px) and above.
+
+[bulma-breakpoint]: https://bulma.io/documentation/overview/responsiveness/#breakpoints
 
 Example
 -------
@@ -56,13 +62,14 @@ Example
 </div>
 ```
 
-
 Variables
 ---------
 
 Name | Default Value
------------- | -------------
+---- | -------------
 `$popover-max-width` | `24rem`
 `$popover-color` | `$text`
 `$popover-background-color` | `$white`
-`$popover-radius` | `$radius` (4px)
+`$popover-radius` | `$radius-large` (6px)
+`$popover-shadow` |
+`$popover-caret-shadow` |
