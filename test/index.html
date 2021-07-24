@@ -99,7 +99,6 @@
       <h2>Responsive Position Test</h2>
       <div class="level">
         <div class="level-item">
-          <!-- <div class="popover is-popover-right-tablet is-popover-bottom-desktop is-popover-left-widescreen is-popover-top-fullhd"> -->
           <div class="popover is-popover-top is-popover-right-tablet is-popover-bottom-desktop is-popover-left-widescreen is-popover-top-fullhd">
             <button class="button is-primary popover-trigger">Responsive Popover</button>
             <div class="popover-content">
@@ -108,7 +107,30 @@
           </div>
         </div>
       </div>
+
+      <h2>No Hover and Remote Trigger Test</h2>
+      <div class="level">
+        <div class="level-item">
+          <div id="manual-popover" class="popover is-not-popover-hover">
+            <button class="button is-primary">No Hover Popover</button>
+            <div class="popover-content">
+              <p>I'm a little popover</p>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <button class="button is-primary" onclick="togglePopover('manual-popover')">Toggle Popover</button>
+        </div>
+      </div>
     </div>
   </section>
+  <script>
+    function togglePopover(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.classList.toggle('is-popover-active');
+      }
+    }
+  </script>
   </body>
 </html>

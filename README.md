@@ -1,14 +1,13 @@
 bulma-popover
 =============
 
-This extension is based on the [bulma-tooltip] extension. This extension
-allows for more complex content to be placed in the pop up. It is styled like
-Bulma's builtin box element.
+This extension is based on the [bulma-tooltip] extension, but allows for more complex content to be placed in the pop up.
+It is styled like Bulma's builtin box element.
 
 [bulma-tooltip]: https://github.com/Wikiki/bulma-tooltip
 
-Classes
--------
+Core Classes
+------------
 
 - `popover` popover wrapper
 - `popover-trigger` display popover when this element is focused
@@ -17,8 +16,9 @@ Classes
 Modifiers
 ---------
 
-To hold the popover open use the `.is-popover-active` modifier.
-This can be used to trigger the popover from JavaScript.
+- `.is-popover-active` can be used to hold the popover open.
+  This can be used to trigger the popover from JavaScript.
+- `.is-not-popover-hover` can be used to disable popover activation on hover
 
 Positioning
 -----------

@@ -7,12 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.1.0-beta.0] - 2021-07-24
+## [1.1.0-beta.1] - 2021-07-24
 
 ### Added
 
 - Added responsive positioning of popovers
 - Added `is-popover-top` class for completeness
+- Added `is-not-popover-hover` to disable trigging the popover on hover
 
 ### Security
 

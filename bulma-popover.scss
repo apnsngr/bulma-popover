@@ -42,11 +42,19 @@
         }
     }
 
-    &.is-popover-active,  // Show popover programmatically
-    &:hover {             // Show popover on hover
+    // Show popover on hover
+    &:hover {
         .popover-content {
             opacity: 1;
             visibility: visible;
+        }
+    }
+
+    // Disable showing the popover on hover
+    &:hover.is-not-popover-hover {
+        .popover-content {
+            opacity: 0;
+            visibility: hidden;
         }
     }
 
@@ -54,6 +62,14 @@
     .popover-trigger:focus ~ .popover-content {
         opacity: 1;
         visibility: visible;
+    }
+
+    // Show popover programmatically
+    &.is-popover-active {
+        .popover-content {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
     }
 
     // Default to top position
