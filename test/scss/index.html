@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bulma Popover Example</title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Bulma Popover Example
+      </h1>
+
+      <h2>Position Test</h2>
+      <div class="level">
+        <div class="level-item">
+          <div class="popover">
+            <button class="button is-primary popover-trigger">Popover Top</button>
+            <div class="popover-content">
+              <ul>
+                <li>Apples</li>
+                <li>Banana</li>
+                <li>Cucumber</li>
+                <li>Really Super Long Item</li>
+              </ul>
+              <p>The quick brown fox jumps over the lazy dog.</p>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="popover is-popover-right">
+            <button class="button is-primary popover-trigger">Popover Left</button>
+            <div class="popover-content">
+              <ul>
+                <li>Apples</li>
+                <li>Banana</li>
+                <li>Cucumber</li>
+                <li>Really Super Long Item</li>
+              </ul>
+              <p>The quick brown fox jumps over the lazy dog.</p>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="popover is-popover-bottom">
+            <button class="button is-primary popover-trigger">Popover Bottom</button>
+            <div class="popover-content">
+              <ul>
+                <li>Apples</li>
+                <li>Bananas</li>
+                <li>Cucumber</li>
+                <li>Really Super Long Item</li>
+              </ul>
+              <p>The quick brown fox jumps over the lazy dog.</p>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="popover is-popover-left">
+            <button class="button is-primary popover-trigger">Popover Right</button>
+            <div class="popover-content">
+              <ul>
+                <li>Apples</li>
+                <li>Banana</li>
+                <li>Cucumber</li>
+                <li>Really Super Long Item</li>
+              </ul>
+              <p>The quick brown fox jumps over the lazy dog.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Table Content Test</h2>
+      <div class="level">
+        <div class="level-item">
+          <div class="popover is-popover-bottom">
+            <button class="button is-primary popover-trigger">Table Popover</button>
+            <div class="popover-content">
+              <table class="table">
+                <thead>
+                  <tr><th>Fruit</th><th>Color</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Apple</td><td>Red</td></tr>
+                  <tr><td>Banana</td><td>Yellow</td></tr>
+                  <tr><td>Cucumber</td><td>Green</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Responsive Position Test</h2>
+      <div class="level">
+        <div class="level-item">
+          <div class="popover is-popover-top is-popover-right-tablet is-popover-bottom-desktop is-popover-left-widescreen is-popover-top-fullhd">
+            <button class="button is-primary popover-trigger">Responsive Popover</button>
+            <div class="popover-content">
+              <p>I'm a little popover</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>No Hover and Remote Trigger Test</h2>
+      <div class="level">
+        <div class="level-item">
+          <div id="manual-popover" class="popover is-not-popover-hover">
+            <button class="button is-primary">No Hover Popover</button>
+            <div class="popover-content">
+              <p>I'm a little popover</p>
+            </div>
+          </div>
+        </div>
+        <div class="level-item">
+          <button class="button is-primary" onclick="togglePopover('manual-popover')">Toggle Popover</button>
+        </div>
+      </div>
+
+      <h2>Input Test</h2>
+      <div>
+        <input type="text" class="input" placeholder="Text input" />
+      </div>
+    </div>
+  </section>
+  <script>
+    function togglePopover(elementId) {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.classList.toggle('is-popover-active');
+      }
+    }
+  </script>
+  </body>
+</html>
