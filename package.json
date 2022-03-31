@@ -1,6 +1,6 @@
 {
   "name": "bulma-popover",
-  "version": "1.1.1-beta.0",
+  "version": "1.1.1",
   "description": "Display popover attached to any element.",
   "main": "css/bulma-popover.min.css",
   "style": "css/bulma-popover.min.css",
@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/apnsngr/bulma-popover#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.4",
     "bulma": "^0.9.3",
-    "clean-css-cli": "^5.5.2",
+    "clean-css-cli": "^5.6.0",
     "node-sass": "^7.0.1",
-    "postcss": "^8.4.8",
+    "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
     "rimraf": "^3.0.2"
   },
